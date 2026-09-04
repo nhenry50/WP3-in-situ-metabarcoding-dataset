@@ -18,11 +18,7 @@ counts <-
     read_tsv("outputs/subseted_tables/tara_pacific_counts_subseted.tsv.gz")
   ) |>
   group_by(asv_id) |>
-<<<<<<< HEAD
   filter(sum(nreads) >= 10, n_distinct(sample) >= 3) |>
-=======
-  filter(sum(nreads) >= 3, n_distinct(sample) >= 2) |>
->>>>>>> 0ef7b7ad887a771eb7a688ad60f14343162354ab
   ungroup()
 
 asvs_updated_stats <-
